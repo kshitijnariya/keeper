@@ -14,3 +14,51 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+function cartbutton() {
+  const x = document.querySelector('.cart-container');
+  const y = x.style.visibility;
+  if (y === 'visible')
+  {
+    x.style.visibility = "hidden";
+    x.style.opacity = "0";
+    x.style.transform = "translateY(1rem)";
+  }
+  else {
+    x.style.visibility = "visible";
+    x.style.opacity = "1";
+    x.style.transform = "translateY(0)";
+  }
+}
+
+function locationbutton() {
+  const a = document.querySelector('.location-dropdown-content');
+  const b = a.style.visibility;
+  if (b === 'visible')
+  {
+    a.style.visibility = "hidden";
+    a.style.opacity = "0";
+    a.style.transform = "translateY(1rem)";
+  }
+  else {
+    a.style.visibility = "visible";
+    a.style.opacity = "1";
+    a.style.transform = "translateY(0)";
+  }
+}
+
+function profilebutton() {
+  const a = document.querySelector('.profile-dropdown-content');
+  const b = a.style.visibility;
+  if (b === 'visible')
+  {
+    a.style.visibility = "hidden";
+    a.style.opacity = "0";
+    a.style.transform = "translateY(1rem)";
+  }
+  else {
+    a.style.visibility = "visible";
+    a.style.opacity = "1";
+    a.style.transform = "translateY(0)";
+  }
+}

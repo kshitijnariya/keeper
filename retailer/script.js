@@ -6,26 +6,12 @@ document.querySelector(".jsFilter").addEventListener("click", function () {
 document.querySelector('.more-button').addEventListener('click', function () {
     document.querySelector('.list-container').classList.toggle('active');
 });
-//order grid
-document.querySelector(".ordr-grid").addEventListener("click", function () {
-  document.querySelector(".ordr-list").classList.remove("active");
-  document.querySelector(".ordr-grid").classList.add("active");
-  document.querySelector(".orders-area-wrapper").classList.add("gridView");
-  document
-    .querySelector(".orders-area-wrapper")
-    .classList.remove("tableView");
-});
-//order list
-document.querySelector(".ordr-list").addEventListener("click", function () {
-  document.querySelector(".ordr-list").classList.add("active");
-  document.querySelector(".ordr-grid").classList.remove("active");
-  document.querySelector(".orders-area-wrapper").classList.remove("gridView");
-  document.querySelector(".orders-area-wrapper").classList.add("tableView");
-});
+
 
 function retailerdashboard() {
   document.getElementById("retailerproducts").style.display = "none";
   document.getElementById("retailerorders").style.display = "none";
+  document.getElementById("addproducts").style.display = "none";
   document.getElementById("retailerdashboard").style.display = "block";
 
   document.getElementById("active2").classList.remove("active");
@@ -35,6 +21,7 @@ function retailerdashboard() {
 function retailerorders() {
 	document.getElementById("retailerdashboard").style.display = "none";
   	document.getElementById("retailerproducts").style.display = "none";
+	  document.getElementById("addproducts").style.display = "none";
   	document.getElementById("retailerorders").style.display = "block";
 
 	document.getElementById("active1").classList.remove("active");
@@ -44,14 +31,23 @@ function retailerorders() {
 function retailerproducts() {
 	document.getElementById("retailerdashboard").style.display = "none";
   	document.getElementById("retailerorders").style.display = "none";
+	  document.getElementById("addproducts").style.display = "none";
   	document.getElementById("retailerproducts").style.display = "block";
 
 	document.getElementById("active1").classList.remove("active");
 	document.getElementById("active2").classList.remove("active");
 	document.getElementById("active3").classList.add("active");
 }
+function addproducts() {
+	document.getElementById("retailerdashboard").style.display = "none";
+  	document.getElementById("retailerorders").style.display = "none";
+  	document.getElementById("retailerproducts").style.display = "none";
+  	document.getElementById("addproducts").style.display = "block";
 
-
+	document.getElementById("active1").classList.remove("active");
+	document.getElementById("active2").classList.remove("active");
+	document.getElementById("active3").classList.add("active");
+}
 /*********************Dashboard*********************/
 
 var chart    = document.getElementById('chart').getContext('2d'),
@@ -124,3 +120,6 @@ var chartInstance = new Chart(chart, {
     data: data,
 		options: options
 });
+
+
+

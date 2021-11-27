@@ -26,7 +26,7 @@
 				<div class="container-fluid d-flex justify-content-around">
 					<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.svg" alt="Shopkeeper"></a>
 
-					<div class="location-container d-flex justify-content-between align-items-center c-pointer">
+					<div onclick="locationbutton()" class="location-container d-flex justify-content-between align-items-center c-pointer">
 						<img class="mr-2" src="img/icons/location.svg" alt="">
 						<p class="m-0 ftsz-15 ftfmly-poppins ftweight-400">Select Your Address</p>
 						<i class="fa fa-angle-down ftsz-20 p-2"></i>
@@ -56,7 +56,7 @@
 						<button class="search-box-icon c-pointer" type="submit"><i class="fa fa-search p-2 F4F6F6"></i></button>
 					</div>
 
-					<div class="profile-container d-flex c-pointer">
+					<div onclick="profilebutton()" class="profile-container d-flex c-pointer">
 						<div class="profile-box mr-2"></div>
 						<div class="">
 							<p class="ftsz-12">Hello, Kshitij</p>
@@ -85,7 +85,16 @@
 						</div>
 					</div>
 
-					<button class="cart-box d-flex c-pointer"><i class="fa fa-shopping-cart ftsz-20 p-2"></i><p class="align-self-center pr-2">Cart</p></button>
+					<button onclick="cartbutton()" class="cart-box d-flex c-pointer"><i class="fa fa-shopping-cart ftsz-20 p-2"></i><p class="align-self-center pr-2">Cart</p></button>
+					<div class="cart-container">
+						<div class="d-flex align-items-center">
+						  <img class="cart-product-img" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80" alt="product">
+						  <div class="cart-product-info">
+							<span>Paneer Toofani Combo</span>
+							<p>1pc</p>
+						  </div>
+						</div>
+  					</div>
 				</div>
 			</nav>
 		</div>
