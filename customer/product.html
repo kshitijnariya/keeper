@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, intial-scale=1, shrink-to-fit=no">
+
+	<!-- Custom CSS -->
+	<link href="css/shop-details.css" rel="stylesheet">
+	 <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+</head>
+<body>
+	<header id="navbar" class="header_area">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container-fluid d-flex justify-content-around">
+					<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.svg" alt="Shopkeeper"></a>
+
+					<div onclick="locationbutton()" class="location-container d-flex justify-content-between align-items-center c-pointer">
+						<img class="mr-2" src="img/icons/location.svg" alt="">
+						<p class="m-0 ftsz-15 ftfmly-poppins ftweight-400">Select Your Address</p>
+						<i class="fa fa-angle-down ftsz-20 p-2"></i>
+
+						<div class="location-dropdown-content">
+									<div class="d-flex align-items-center dropdown-profile-padding">
+										<button class="button-padding detect-button c-pointer">Detect location</button>
+										<p class="pl-3 pr-3">- OR -</p>
+										<div class="search-box w-50">
+											<input class="ftsz-12 w-10" autocomplete="off" placeholder="Type your location">
+										</div>
+									</div>
+								</div>
+						</div>
+
+					<div class="d-flex w-45">
+						<div class="search-catagories">
+						  	<select>
+								<option value="0">All</option>
+								<option value="1">All</option>
+								<option value="2">Grocery</option>
+								<option value="3">Food</option>
+								<option value="4">Electronics</option>
+							</select>
+						</div>
+						<div class="search-box w-100"><input class="ftsz-12 w-100" autocomplete="off" placeholder="Search for products"></div>
+						<button class="search-box-icon c-pointer" type="submit"><i class="fa fa-search p-2 F4F6F6"></i></button>
+					</div>
+
+					<div onclick="profilebutton()" class="profile-container d-flex c-pointer">
+						<div class="profile-box mr-2"></div>
+						<div class="">
+							<p class="ftsz-12">Hello, Kshitij</p>
+							<div class="d-flex">
+								<p class="ftsz-15 mr-1">Profile</p>
+								<i class="fa fa-caret-down"></i>
+								<div class="profile-dropdown-content">
+									<div class="d-flex align-items-center dropdown-profile-padding">
+										<div class="profile-box-2 mr-3"></div>
+										<div class="d-block">
+											<p class="ftsz-15 padding-tb2-5 black-0-8">Kshitij Nariya</p>
+											<p class="ftsz-12 black-0-8">knariya7422@gmail.com</p>
+										</div>
+									</div>
+									<div class="divider-border"></div>
+									<div class="dropdown-hover dropdown-profile-padding">
+										<p>My Orders</p>
+									</div>
+									<div class="divider-border"></div>
+									<div class="dropdown-hover d-flex align-items-center dropdown-profile-padding">
+										<div class="logout-svg mr-2"></div>
+										<p>Log Out</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<button onclick="cartbutton()" class="cart-box d-flex c-pointer"><i class="fa fa-shopping-cart ftsz-20 p-2"></i><p class="align-self-center pr-2">Cart</p></button>
+
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<div class="main-container">
+		<div id="topcon" class="container top-con">
+			<div>
+				<h1 class="shop-name">McDonald's</h1>
+				<p class="shop-categories">Burger, Fast Food, Beverages</p>
+				<p class="shop-location">Manjalpur, Vadodara</p>
+					<p></p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="prod-container">
+				<div class="categories-container">
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+					<h4 class="categories-text">Meals</h4>
+				</div>
+				<div class="product-container">
+					<h2 class="product-title">Meals</h2>
+					<div class="prod-cat-con">
+						<div class="product-image-box">
+							<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80">
+						</div>
+						<div class="prod-details-con">
+							<h6 class="product-name">McAloo Tikki Combo</h6>
+							<p class="product-price">₹845.72</p>
+							<p class="product-description">4 American Cheese Supreme Chicken Burgers + 2 Fries (M) + 2 Coke</p>
+						</div>
+						<div class="addtocartbutton">
+							<button class="add-button">ADD <span> +</span></button>
+						</div>
+					</div>
+					<div class="prod-cat-con">
+						<div class="product-image-box">
+							<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80">
+						</div>
+						<div class="prod-details-con">
+							<h6 class="product-name">McAloo Tikki Combo</h6>
+							<p class="product-price">₹845.72</p>
+							<p class="product-description">4 American Cheese Supreme Chicken Burgers + 2 Fries (M) + 2 Coke</p>
+						</div>
+						<div class="addtocartbutton">
+							<button class="add-button">ADD <span> +</span></button>
+						</div>
+					</div>
+					<div class="prod-cat-con">
+						<div class="product-image-box">
+							<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80">
+						</div>
+						<div class="prod-details-con">
+							<h6 class="product-name">McAloo Tikki Combo</h6>
+							<p class="product-price">₹845.72</p>
+							<p class="product-description">4 American Cheese Supreme Chicken Burgers + 2 Fries (M) + 2 Coke</p>
+						</div>
+						<div class="addtocartbutton">
+							<button class="add-button">ADD <span> +</span></button>
+						</div>
+					</div>
+					<div class="prod-cat-con">
+						<div class="product-image-box">
+							<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80">
+						</div>
+						<div class="prod-details-con">
+							<h6 class="product-name">McAloo Tikki Combo</h6>
+							<p class="product-price">₹845.72</p>
+							<p class="product-description">4 American Cheese Supreme Chicken Burgers + 2 Fries (M) + 2 Coke</p>
+						</div>
+						<div class="addtocartbutton">
+							<button class="add-button">ADD <span> +</span></button>
+						</div>
+					</div>
+					<div class="prod-cat-con">
+						<div class="product-image-box">
+							<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80">
+						</div>
+						<div class="prod-details-con">
+							<h6 class="product-name">McAloo Tikki Combo</h6>
+							<p class="product-price">₹845.72</p>
+							<p class="product-description">4 American Cheese Supreme Chicken Burgers + 2 Fries (M) + 2 Coke</p>
+						</div>
+						<div class="addtocartbutton">
+							<button class="add-button">ADD <span> +</span></button>
+						</div>
+					</div>
+					<div class="prod-cat-con">
+						<div class="product-image-box">
+							<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80">
+						</div>
+						<div class="prod-details-con">
+							<h6 class="product-name">McAloo Tikki Combo</h6>
+							<p class="product-price">₹845.72</p>
+							<p class="product-description">4 American Cheese Supreme Chicken Burgers + 2 Fries (M) + 2 Coke</p>
+						</div>
+						<div class="addtocartbutton">
+							<button class="add-button">ADD <span> +</span></button>
+						</div>
+					</div>
+					<div class="prod-cat-con">
+						<div class="product-image-box">
+							<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80">
+						</div>
+						<div class="prod-details-con">
+							<h6 class="product-name">McAloo Tikki Combo</h6>
+							<p class="product-price">₹845.72</p>
+							<p class="product-description">4 American Cheese Supreme Chicken Burgers + 2 Fries (M) + 2 Coke</p>
+						</div>
+						<div class="addtocartbutton">
+							<button class="add-button">ADD <span> +</span></button>
+						</div>
+					</div>
+					<div class="prod-cat-con">
+						<div class="product-image-box">
+							<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80">
+						</div>
+						<div class="prod-details-con">
+							<h6 class="product-name">McAloo Tikki Combo</h6>
+							<p class="product-price">₹845.72</p>
+							<p class="product-description">4 American Cheese Supreme Chicken Burgers + 2 Fries (M) + 2 Coke</p>
+						</div>
+						<div class="addtocartbutton">
+							<button class="add-button">ADD <span> +</span></button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script src="js/main.js"></script>
+</body>
+</html>

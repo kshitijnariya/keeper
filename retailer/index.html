@@ -38,12 +38,6 @@
         </li>
         <li class="sidebar-list-item">
           <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-inbox"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
-            <span>Inbox</span>
-          </a>
-        </li>
-        <li class="sidebar-list-item">
-          <a href="#">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
             <span>Notifications</span>
           </a>
@@ -160,7 +154,9 @@
               <span>Last 30 days</span>
             </div>
             <div class="line-chart">
-              <canvas id="chart"></canvas>
+                  <div class="box">
+                      <div id="bar"> </div>
+                  </div>
             </div>
             <div class="chart-data-details">
               <div class="chart-details-header"></div>
@@ -371,9 +367,7 @@
             <ul class="addproducts-container-list">
               <li class="addproducts-list-text"><a href="#productdetails">Product Detail</a></li>
               <li class="addproducts-list-text"><a href="#productimage">Product Images</a></li>
-              <li class="addproducts-list-text"><a href="#productinventory">Inventory</a></li>
               <li class="addproducts-list-text"><a href="#productsize">Sizes</a></li>
-              <li class="addproducts-list-text"><a href="#productcolor">Colors</a></li>
             </ul>
           </div>
         </div>
@@ -433,9 +427,10 @@
             <!-- End Upload Area -->
 
           </div>
-          <div id="productinventory" class="addproducts-container">
-            <div class="addproducts-container-header">
-              <h4 class="align-self-center">Add Inventory</h4>
+          <div id="productsize" class="addproducts-container">
+            <div class="w-100 d-flex justify-content-between addproducts-container-header">
+              <h4 class="align-self-center">Add Sizes</h4>
+              <button class="das-accept-order">Add Size</button>
             </div>
             <div class="addproducts-container-list">
               <div class="w-50">
@@ -445,19 +440,6 @@
                 </div>
                 <input type="text" placeholder="Enter quantity"/>
               </div>
-            </div>
-          </div>
-          <div id="productsize" class="addproducts-container">
-            <div class="w-100 d-flex justify-content-between addproducts-container-header">
-              <h4 class="align-self-center">Add Sizes</h4>
-              <button class="das-accept-order">Add Size</button>
-            </div>
-
-          </div>
-          <div id="productcolor" class="addproducts-container">
-            <div class="w-100 d-flex justify-content-between addproducts-container-header">
-              <h4 class="align-self-center">Add Colors</h4>
-              <button class="das-accept-order">Add Color</button>
             </div>
           </div>
           <div class="adproduct-ls-button">
@@ -472,6 +454,8 @@
 
   <script  src="./script.js"></script>
   <script  src="./addimage.js"></script>
+  <script src='https://cdn.jsdelivr.net/npm/apexcharts@2.1.2'></script>
+  <script  src="./chart.js"></script>
 
 </body>
 </html>

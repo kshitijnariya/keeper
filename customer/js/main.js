@@ -15,22 +15,6 @@ function myFunction() {
   }
 }
 
-function cartbutton() {
-  const x = document.querySelector('.cart-container');
-  const y = x.style.visibility;
-  if (y === 'visible')
-  {
-    x.style.visibility = "hidden";
-    x.style.opacity = "0";
-    x.style.transform = "translateY(1rem)";
-  }
-  else {
-    x.style.visibility = "visible";
-    x.style.opacity = "1";
-    x.style.transform = "translateY(0)";
-  }
-}
-
 function locationbutton() {
   const a = document.querySelector('.location-dropdown-content');
   const b = a.style.visibility;

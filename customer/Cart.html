@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <header id="navbar" class="header_area">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container-fluid d-flex justify-content-around">
+					<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.svg" alt="Shopkeeper"></a>
+
+					<div onclick="locationbutton()" class="location-container d-flex justify-content-between align-items-center c-pointer">
+						<img class="mr-2" src="img/icons/location.svg" alt="">
+						<p class="m-0 ftsz-15 ftfmly-poppins ftweight-400">Select Your Address</p>
+						<i class="fa fa-angle-down ftsz-20 p-2"></i>
+
+						<div class="location-dropdown-content">
+									<div class="d-flex align-items-center dropdown-profile-padding">
+										<button class="button-padding detect-button c-pointer">Detect location</button>
+										<p class="pl-3 pr-3">- OR -</p>
+										<div class="search-box w-50">
+											<input class="ftsz-12 w-10" autocomplete="off" placeholder="Type your location">
+										</div>
+									</div>
+								</div>
+						</div>
+
+					<div class="d-flex w-45">
+						<div class="search-catagories">
+						  	<select>
+								<option value="0">All</option>
+								<option value="1">All</option>
+								<option value="2">Grocery</option>
+								<option value="3">Food</option>
+								<option value="4">Electronics</option>
+							</select>
+						</div>
+						<div class="search-box w-100"><input class="ftsz-12 w-100" autocomplete="off" placeholder="Search for products"></div>
+						<button class="search-box-icon c-pointer" type="submit"><i class="fa fa-search p-2 F4F6F6"></i></button>
+					</div>
+
+					<div onclick="profilebutton()" class="profile-container d-flex c-pointer">
+						<div class="profile-box mr-2"></div>
+						<div class="">
+							<p class="ftsz-12">Hello, Kshitij</p>
+							<div class="d-flex">
+								<p class="ftsz-15 mr-1">Profile</p>
+								<i class="fa fa-caret-down"></i>
+								<div class="profile-dropdown-content">
+									<div class="d-flex align-items-center dropdown-profile-padding">
+										<div class="profile-box-2 mr-3"></div>
+										<div class="d-block">
+											<p class="ftsz-15 padding-tb2-5 black-0-8">Kshitij Nariya</p>
+											<p class="ftsz-12 black-0-8">knariya7422@gmail.com</p>
+										</div>
+									</div>
+									<div class="divider-border"></div>
+									<div class="dropdown-hover dropdown-profile-padding">
+										<p>My Orders</p>
+									</div>
+									<div class="divider-border"></div>
+									<div class="dropdown-hover d-flex align-items-center dropdown-profile-padding">
+										<div class="logout-svg mr-2"></div>
+										<p>Log Out</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<button onclick="cartbutton()" class="cart-box d-flex c-pointer"><i class="fa fa-shopping-cart ftsz-20 p-2"></i><p class="align-self-center pr-2">Cart</p></button>
+
+				</div>
+			</nav>
+		</div>
+	</header>
+    <div class="cart-back">
+        <div class="cart-padding">
+            <div class="cart big">
+                <div class="cart-container">
+                <div class="inner-cart">
+					<div class="in-c">
+						<img class="cart-product-img" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80" alt="product">
+						<div class="cart-product-info">
+							<span>Lenovo Ideapad L340</span>
+							<p>Lenovo Store</p>
+						</div>
+					</div>
+					<div class="product-count">
+						<button onclick="minus()">-</button>
+						<input readonly="readonly" id="count" type="number">
+						<button onclick="plus()">+</button>
+					</div>
+					<div class="price-remove">
+						<p class="cart-price">₹5000</p>
+						<p class="cart-remove">Remove</p>
+					</div>
+                </div>
+            </div>
+            </div>
+            <div class="cart-container small">
+				<div class="bill-container">
+					<h3 class="bill-heading">Bill Details</h3>
+					<div class="bill-brief-con">
+						<div class="bill-brief">
+							<p class="item-font">Item Total</p>
+							<p class="item-price">₹5000</p>
+						</div>
+						<div class="bill-brief">
+							<p class="item-font">Ddelivery Fee</p>
+							<p class="item-price">₹50</p>
+						</div>
+						<div class="total-border"></div>
+						<div class="bill-brief">
+							<p class="item-font-bold">Total(inc. GST)</p>
+							<p class="item-font-bold b">₹8000</p>
+						</div>
+					</div>
+					<div class="search-catagory">
+						<select name="order_type" id="order_type" onchange="changeOrderType();">
+							<option value="HOME_DELIVERY" selected>HOME DELIVERY</option>
+							<option value="PICK_UP">SELF PICKUP</option>
+						</select>
+					</div>
+					<div id="datetime" class="datetime">
+						<input type="date" id="pick_up_date" name="pick_up_time">
+						<input type="time" id="pick_up_time" name="pick_up_time">
+					</div>
+<!--					<div class="coupencode-con">-->
+<!--						<input type="text" />-->
+<!--						<button class="coupencode-button">Apply</button>-->
+<!--					</div>-->
+					<button class="checkout-button">Checkout
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+						  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+						</svg>
+					</button>
+				</div>
+            </div>
+        </div>
+	</div>
+
+
+
+
+
+
+<script>
+	function changeOrderType() {
+    OrderType = document.getElementById('order_type').value;
+    if (OrderType === "PICK_UP"){
+        document.getElementById("datetime").style.display = "flex";
+    }else if (OrderType === "HOME_DELIVERY"){
+        document.getElementById("datetime").style.display = "none";
+        document.getElementById("pick_up_time").value = null;
+        document.getElementById("pick_up_date").value = null;
+    }
+}
+</script>
+
+<script>
+	function minus() {
+		var inputval =parseInt(document.getElementById("count").value);
+		if (inputval > 0) {
+			inputval = inputval - 1;
+			document.getElementById("count").value = inputval;
+		}
+	}
+	function plus() {
+		let inputvalp = parseInt(document.getElementById("count").value);
+		inputvalp = inputvalp+1;
+		document.getElementById("count").value = inputvalp;
+	}
+</script>
+<script src="js/main.js"></script>
+<script src="js/dropdown.js"></script>
+</body>
+</html>
